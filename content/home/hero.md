@@ -13,7 +13,7 @@ weight = 3
 #   Deactivate an option by commenting out the line, prefixing it with `#`.
 [header]
   overlay_color = "#666"  # An HTML color value.
-  overlay_img = "headers/bubbles-wide.jpg"  # Image path relative to your `static/img/` folder.
+  overlay_img = "headers/universe.jpg"  # Image path relative to your `static/img/` folder.
   overlay_filter = 0.5  # Darken the image. Value in range 0-1.
 
 # Call to action button (optional).
@@ -21,7 +21,7 @@ weight = 3
 #   Deactivate by commenting out parameters, prefixing lines with `#`.
 [cta]
   url = "./post/getting-started/"
-  label = '<i class="fa fa-download"></i> Main post'
+  label = '<i class="fa fa-chevron-circle-right"></i> Main post'
 +++
 
 I analyse and program and support open source and open data. 
