@@ -1,7 +1,7 @@
 baseurl = "/"  # End your URL with a `/` trailing slash, e.g. `https://example.com/`.
-title = "Adam Gruer"
-copyright = "&copy; 2017 Adam Gruer"
-theme = "hugo-academic"
+title = "Academic"
+copyright = "&copy; 2017 Your Name"
+theme = "academic"
 enableEmoji = true
 footnotereturnlinkcontents = "<sup>^</sup>"
 ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
@@ -39,21 +39,21 @@ defaultContentLanguageInSubdir = false
   font = "default"
 
   # Your details.
-  name = "Adam Gruer"
-  role = "Business Analyst"
+  name = "Lena Smith"
+  role = "Professor of Artificial Intelligence"
 
   # Organizations/Affiliations.
   #   Separate multiple entries with a comma, using the form: `[ {name="Org1", url=""}, {name="Org2", url=""} ]`.
-  organizations = [ { name = "The Royal Children's Hospital Melbourne", url = "https://www.rch.org.au" } ]
+  organizations = [ { name = "Stanford University", url = "" } ]
 
   gravatar = false  # Get your avatar from Gravatar.com? (true/false)
   avatar = "portrait.jpg"  # Specify an avatar image (in `static/img/` folder) or delete value to disable avatar.
-  email = "adamgruer@icloud.org"
-  address = false
-  office_hours = false
-  phone = false
-  skype = false
-  
+  email = "test@example.org"
+  address = "Building 1 Room 1, Stanford University, California, 90210, USA"
+  office_hours = "Monday 10:00 to 13:00 or email for appointment"
+  phone = "888 888 88 88"
+  skype = "echo123"
+  telegram = ""
 
   # Enable Keybase in Contact section by entering your keybase.io username.
   keybase = ""
@@ -192,18 +192,22 @@ defaultContentLanguageInSubdir = false
   [[params.social]]
     icon = "envelope"
     icon_pack = "fa"
-    link = "mailto:adamgruer@icloud.com"
+    link = "mailto:test@example.org"
 
   [[params.social]]
     icon = "twitter"
     icon_pack = "fa"
-    link = "//twitter.com/AdamGruer"
+    link = "//twitter.com/GeorgeCushen"
 
+  [[params.social]]
+    icon = "google-scholar"
+    icon_pack = "ai"
+    link = "https://scholar.google.co.uk/citations?user=sIwtMXoAAAAJ"
 
   [[params.social]]
     icon = "github"
     icon_pack = "fa"
-    link = "//github.com/adam-gruer"
+    link = "//github.com/gcushen"
 
 
 # Navigation Links
