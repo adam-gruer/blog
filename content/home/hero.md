@@ -20,7 +20,7 @@ weight = 3
 #   Activate the button by specifying a URL and button label below.
 #   Deactivate by commenting out parameters, prefixing lines with `#`.
 [cta]
-  url = "./post/2017-10-31-new-post-from-r-studio/"
+  url = "./post/new-post-from-r-studio/"
   label = '<i class="fa fa-chevron-circle-right"></i> Latest post'
 +++
 
