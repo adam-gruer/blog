@@ -11,6 +11,7 @@ weight = 5
 [interests]
   interests = [
     "Data Science",
+	"Programming",
     "Public Healthcare"
   ]
 
