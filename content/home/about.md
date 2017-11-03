@@ -27,4 +27,4 @@ weight = 5
 
 # Biography
 
-Adam Gruer has been providing analytics and programming solutions in the Victorian Public Health system since 2003.  
+I have been providing analytics and programming solutions in the Victorian Public Health system since 2003.  
