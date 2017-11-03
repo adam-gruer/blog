@@ -12,7 +12,8 @@ weight = 5
   interests = [
     "Data Science",
 	"Programming",
-    "Public Healthcare"
+    "Public Healthcare",
+    "Equality and Diversity"
   ]
 
 # List your qualifications (such as academic degrees).
@@ -26,4 +27,4 @@ weight = 5
 
 # Biography
 
-Adam Gruer has been providing analytics and programming solution in the Victorian Public Health system since 2003.  
+Adam Gruer has been providing analytics and programming solutions in the Victorian Public Health system since 2003.  
