@@ -1,0 +1,42 @@
+---
+title: 'Github issues data - ozunconf 17 '
+author: Adam Gruer
+date: '2017-11-12'
+slug: github-issues-data-ozunconf-17
+categories:
+  - Analysis
+tags:
+  - API
+  - GraphQL
+  - R
+header:
+  caption: 'unconferencers'
+  image: 'ozunconf.jpg'
+---
+
+
+
+<p>What a great two days I had at rOpenSci’s <a href="http://ozunconf17.ropensci.org/">ozunconf 2017</a>.</p>
+<ul>
+<li>two days of meeting fascinating and friendly new people</li>
+<li>two days filled with great conversations</li>
+<li>two days of learning new things and breaking things</li>
+<li>two days of inspiration</li>
+<li>two days of communal git ups and downs</li>
+<li>two days of not having to explain ‘why R’</li>
+</ul>
+<p>Before, during and since the ozunconf I have been the interested in the idea that since actions create data - our own actions in attending and participating generate their own data that would be interesting to analyse.</p>
+<p>In this post I’ll attempt to provide some analysis of the github issues that were used as the springboard for discussions and projects at the conference and beyond.</p>
+<div id="getting-the-data-from-the-github-graphql-api" class="section level2">
+<h2>Getting the data from the GitHub GraphQL API</h2>
+<p>Before the conference, participants were given the option of creating issues for possible selection as projects during the conference and aftwerwards. There were a <a href="https://github.com/ropensci/ozunconf17/issues">lot of great ideas</a> and discussion in the comments on each issue. Github offers several API for getting data about a repo and its issues. I am attempting to use <a href="https://developer.github.com/v4/">Github’s GraphQL API</a>, which is an emerging <a href="http://graphql.org/">data query language</a> being used for API by services such as Github, Facebook, Twitter and Pinterest.</p>
+<div id="load-some-packages" class="section level3">
+<h3>Load some packages</h3>
+<pre class="r"><code># devtools::install_github(&quot;ropensci/ghql&quot;)
+library(&quot;ghql&quot;)  # creates a graphql client 
+library(&quot;jsonlite&quot;) # helps parse JSON
+library(&quot;httr&quot;) # for making web requests and getting the reponse
+library(dplyr)  # data wrangling and pipes %&gt;%
+library(purrr) # there will be a lot of map / reducing with the returned data</code></pre>
+</div>
+</div>
