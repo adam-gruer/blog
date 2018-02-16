@@ -51,7 +51,7 @@ library(ochRe) # for some Oz color palettes
 
 ### Create a graphQL Client
 If you've read this far I am sad to inform you that I have not finished this post.
-I hope to do so one day....`r emo::ji("shrug")
+I hope to do so one day....`r emo::ji("shrug")`
 
 
 
