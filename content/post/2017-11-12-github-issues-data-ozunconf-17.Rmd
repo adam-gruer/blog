@@ -13,6 +13,10 @@ header:
   caption: 'unconferencers'
   image: 'ozunconf.jpg'
 ---
+```{r, message=FALSE, warning=FALSE, include=FALSE}
+library(icon) # for some cool icons!
+
+```
 
 What a great two days I had at rOpenSci's [ozunconf 2017](http://ozunconf17.ropensci.org/).
 
@@ -27,7 +31,7 @@ Before, during and since the ozunconf I have been the interested in the idea tha
 
 In this post I'll attempt to provide some analysis of the github issues that were used as the springboard for discussions and projects at the conference and beyond. 
 
-## Getting the data from the GitHub GraphQL API
+## Getting the data from the GitHub GraphQL API 
 Before the conference, participants were given the option of creating issues for possible selection as projects during the conference and aftwerwards.  There were a [lot of great ideas](https://github.com/ropensci/ozunconf17/issues) and discussion in the comments on each issue.
 Github offers several API for getting data about a repo and its issues. I am attempting to use [Github's GraphQL API](https://developer.github.com/v4/), which is an emerging [data query language](http://graphql.org/) being used for API by services such as Github, Facebook, Twitter and Pinterest.
 
@@ -39,7 +43,16 @@ library("jsonlite") # helps parse JSON
 library("httr") # for making web requests and getting the reponse
 library(dplyr)  # data wrangling and pipes %>%
 library(purrr) # there will be a lot of map / reducing with the returned data
+# devtools::install_github("ropenscilabs/icon")
+library(icon) # for some cool icons!
+# devtools::install_github("ropenscilabs/ochRe"
+library(ochRe) # for some Oz color palettes
 ```
+
+### Create a graphQL Client
+If you've read this far I am sad to inform you that I have not finished this post.
+I hope to do so one day....`r emo::ji("shrug")
+
 
 
 
