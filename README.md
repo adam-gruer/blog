@@ -1,3 +1,3 @@
 # blog
-My blog that can be read at http://adamgruer.rbind.io/
+My data science blog that can be read at https://adamgruer.rbind.io/
 
