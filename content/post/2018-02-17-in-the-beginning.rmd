@@ -1,0 +1,152 @@
+---
+title: 'In the beginning'
+author: Adam Gruer
+date: '2018-02-17'
+slug: in-the-beginning
+categories: 
+  - Advocacy
+  - Beginner
+  - Teams
+tags:
+  - Resources
+  - Tools
+  - R
+header:
+  caption: 'Start'
+  image: 'start.jpg'
+---
+_tl;dr - I gave my team a 30 min intro to R talk and followed up with an email listing useful resources for people who have never tried R._
+
+I work in a small team of 9 performance, costing and electronic medical record (EMR or EHR) analysts at a publicly funded peadiatric hospital in Melbourne, Australia. I have been on my own quixotic 
+
+> (adj. possessing or acting with the desire to do noble and romantic deeds, without thought of realism and practicality; exceedingly idealistic) 
+
+journey with R (and data science) since discovering Rs existence while googling for a way to make boxplots in Excel back in 2014.
+
+There are five women and four men in out team and we have immigrants from  countries such as Singapore, Sri Lanka, South Africa and Moldova. Every member of my team, including myself, have no formal computer science or statistical education.  Like most people who do this work in Melbourne our career backgrounds are varied - nursing, clincal coding, physiotherapy, lab science and accounting to name a few.
+
+We all do our work mostly by querying our data warehouse and electronic medical record (Epic) using SQL queries and/or Microsft Analysis Services MDX queries and presenting results using a mixture of Excel, PDF, Word and SQL Server Reporting Services depending on the business requests. Many of our reports are automated to various degrees and delivered via various methods including a custom reporting portal and scheduled emails.
+
+Even though our SQL skills range from post-beginner to advanced and Excel is used in quite sophisticated ways - few of my colleagues consider themselves programmers!
+
+My team are definitely aware of my Rventures and some of my work in R has now been been put in to production and used in the hospital's daily operations stand up meeting ("The Huddle"), a daily patient funding snapshot, and in our weekly surgical performance report ("M.A.T.E.S. - Meeting Access Targets in Elective Surgery"). Their attitude had slowly changed from skepticism to curiosity.
+
+However, I have so far struggled to get my team exploring how R might be useful to them. There are many reasons for this, some that I think are at play are: 
+
+* day to day pressures of existing work
+* advanced skill and comfort with existing tools - especially when deadlines are tight 
+* lack of self-confidence in their programming capabilites
+* impostor syndrome and fear of 'failure'
+* lack of mentorship
+* lack of understanding of what the R ecosystem could be used for
+* almost non-existent training budgets
+
+I have been frustrated at times by this but also recognise that I do very little to address it, often for very similar reasons to those I listed above! I've been meaning to take some action for too long.
+
+Well last week I did some things. I gave a short 35 min presentation to my team trying to give them a brief and interesting overview of the R universe and followed it up with an email highlighting what I feel are some of the best resources for people new to R. The email can be found below, it feels good to have started!
+
+*****
+
+Hi team here are some resources for you all to check out if you are interested in R.
+
+## Galleries of web apps and reporting that can be made with R
+
+* Shiny https://shiny.rstudio.com/gallery/
+
+Shiny lets you create interactive web pages from your data – great examples of where you can get to.
+There is even a ER Optimization app! https://gallery.shinyapps.io/EDsimulation/
+
+* R markdown https://rmarkdown.rstudio.com/gallery.html
+
+R markdown lets you create all sorts of reports and mix code, charts tables with text, for example commentary.
+Refreshable and reproducible and every part of the workflow from getting the data to publishing the report to PDF or word or the web can be kept in place
+
+
+## useR!2018 Conference – Brisbane July 2018
+
+* https://user2018.r-project.org/
+
+The annual , international R conference usually held only in the US or Europe is being held in Brisbane this July – this is probably once in a decade opportunity to attend within Australia.
+This would be a great conference to attend with beginners through to advance workshops, talks and demos of the latest developments and
+networking with all kinds of data people.
+There are **scholarships** available on the conference website that are worth applying for.
+Maybe an option for our training budget?
+
+
+## Online books for beginners:
+
+* Field Guide to the R Ecosystem by Mark Sellors http://fg2re.sellorm.com/
+
+A concise, high level overview of the various tools , software etc.  Potentially useful for explaining R to exec, IT etc. 
+
+* Modern Dive by Chester Ismay and Albert Y. Kim http://moderndive.com/index.html
+
+A great place to start learning. The first sentence of this book is:
+
+>  Help! I’m new to R and RStudio and I need to learn about them! However, I’m completely new to coding! What do I do?  If you’re asking yourself this question, then you’ve come to the right place!
+
+R for Data Science by Garrett Grolemund and Hadley Wickham http://r4ds.had.co.nz/
+
+More in depth book for beginners, a great next step once you've become familiar with some of the basics.  I still refer to it.
+
+
+**All the above are free, and all actually written and published using R itself!**
+
+
+## Online Courses
+
+* DataCamp https://www.datacamp.com
+
+Really great way to learn, Has lots of courses on R, SQL, Python, Git, Statistics etc.
+You do the whole course, including running R code, in the datacamp website – no need to install anything on your computer.
+It is a freemium product – sign up for free and the first chapter of each course is free but you need a subscription to do whole courses.
+The Intro to R, Intro to SQL courses are free for the entire course.
+I have bought a subscription – you can pay month by month or annual. After you register for free you will be offered a 40% discount for the next two days.
+For an annual subscription with a 40% discount it cost me A$230. I can claim that as a tax deduction. Or we could convince work to pay it.
+I have already got my money’s worth from doing just a couple of the course, You can wait till they have a sale. Last December on ‘Cyber Monday they offered a 60% discount for a few days.
+
+## R Studio Online
+
+https://rstudio.cloud/
+
+Use R studio in your web browser for free, nothing to install. Great for learning – obviously we can’t work with our own data. But there are lots of in built datasets to learn with.
+This is very new – so may have the odd bug, but works really well. Eventually there will be some sort of tiered pricing but free while they develop it.
+You can save your scripts just like you would if R Studio was installed on your PC.
+I highly recommend this if you are working through some of the online books as you don’t have to do any installation and can get straight into coding.
+
+
+## Online Documentation
+
+* Rdocumentation https://www.rdocumentation.org/
+
+A good place to search for packages or documentation all in one place
+
+
+## Community forums , social media, meetups
+
+* R Studio Community https://community.rstudio.com/
+
+Good place to ask questions and get helpful, friendly answers.
+
+* Twitter https://twitter.com/search?q=%23rstats&src=typd
+
+the #rstats tag on Twitter is the best way to hear about new packages, new tutorial, articles etc.
+
+* R Ladies https://twitter.com/RLadiesAU 
+
+R-Ladies AU is a group that runs monthly talks , workshops and demos of R – many are aimed at beginners, and encourages women in data science a maths.
+Allies are welcome at the talks & demos – Trace and I have been to a couple and they are usually worthwhile and accessiblee for beginners. Meetup link http://meetu.ps/c/2MWyZ/1R1nz/a
+
+* R Ladies remote https://twitter.com/RLadiesRemote
+
+This is just starting with the idea being online talks, demos for people who can’t attend the in person meetups .
+
+* R OpenSci https://ropensci.org/
+
+Open data science org – does lots of great things and ran the free two day conference I went to last year.
+
+* Melbourne R users meetup http://meetu.ps/c/cZlb/1R1nz/a
+
+monthly talks, demos.
+
+

@@ -20,7 +20,7 @@ weight = 3
 #   Activate the button by specifying a URL and button label below.
 #   Deactivate by commenting out parameters, prefixing lines with `#`.
 [cta]
-  url = "./post/github-issues-data-ozunconf-17/"
+  url = "./post/in-the-beginning/"
   label = '<i class="fa fa-chevron-circle-right"></i> Latest post'
 +++
 
