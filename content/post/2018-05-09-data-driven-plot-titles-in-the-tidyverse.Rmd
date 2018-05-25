@@ -1,0 +1,16 @@
+---
+title: 'Data Driven Plot Titles in the Tidyverse '
+author: Adam Gruer
+date: '2018-05-09'
+slug: data-driven-plot-titles-in-the-tidyverse
+categories:
+  - Tips
+tags:
+  - Tidyverse
+  - Visualisation
+header:
+  caption: ''
+  image: ''
+---
+ This is a neat little use of the awesome magrittr package's pipe  %>% function and some useful syntax its creator made available. 
+
