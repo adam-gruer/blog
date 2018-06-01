@@ -1,0 +1,17 @@
+---
+title: 'Guards! Guards! purrr::map_if '
+author: Adam Gruer
+date: '2018-06-01'
+slug: guards-guards-purrr-map-if
+categories:
+  - Tips
+tags:
+  - tidyverse
+  - purrr
+  - rmarkdown
+  - predicates
+header:
+  caption: ''
+  image: ''
+---
+
