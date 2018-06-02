@@ -1,0 +1,45 @@
+---
+title: 'Guards! Guards! purrr::map_if '
+draft: true
+author: Adam Gruer
+date: '2018-06-01'
+slug: guards-guards-purrr-map-if
+categories:
+  - Tips
+tags:
+  - tidyverse
+  - purrr
+  - rmarkdown
+  - predicates
+header:
+  caption: 'Guards! Guards!'
+  image: 'guards_guards.jpg'
+---
+
+
+
+<p>I found a cool use for purrr’s <code>map_if</code> function recently that both felt wizardly and helped me better understand when to use <code>map-if</code>.
+Problem: I had a list called <code>params</code> ` with 3 items of different types</p>
+<ul>
+<li>start_date - a Date</li>
+<li>end_date - a Date</li>
+<li>confidence_interval - a Numeric</li>
+</ul>
+<p>I wanted to convert this to a list where the two dates were formatted as characters in the format <em>01 January 2015</em> and the numeric left as is. So, if the item was a date I wanted to apply the <code>format</code> function to it and if not a date do nothing to the item.</p>
+<p>Iterating over a list and applying a function? I knew I would want to use the <code>purrr</code> package.</p>
+<p>I just needed to find a function to only do something if the item passed some test.</p>
+<p>Enter <code>purrr::map_if()</code></p>
+<pre class="r"><code>params &lt;-  list(
+                start_at = as.Date(&quot;2015-01-01&quot;),
+                end_at = as.Date(&quot;2015-12-31&quot;),
+                ci = 0.8
+                )
+params</code></pre>
+<pre><code>## $start_at
+## [1] &quot;2015-01-01&quot;
+## 
+## $end_at
+## [1] &quot;2015-12-31&quot;
+## 
+## $ci
+## [1] 0.8</code></pre>

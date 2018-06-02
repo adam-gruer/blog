@@ -1,5 +1,6 @@
 ---
 title: 'Guards! Guards! purrr::map_if '
+draft: true
 author: Adam Gruer
 date: '2018-06-01'
 slug: guards-guards-purrr-map-if
@@ -11,7 +12,57 @@ tags:
   - rmarkdown
   - predicates
 header:
-  caption: ''
-  image: ''
+  caption: 'Guards! Guards!'
+  image: 'guards_guards.jpg'
 ---
+
+I found a cool use for purrr's `map_if` function recently that both felt wizardly and helped me better understand when to use `map-if`.
+Problem: I had a list called `params` ` with 3 items of different types
+
+- start_date - a Date 
+- end_date - a Date
+- confidence_interval - a Numeric
+
+```{r create the list}
+params <-  list(
+                start_date = as.Date("2015-01-01"),
+                end_date = as.Date("2015-12-31"),
+                confidence_interval = 0.8
+                )
+params
+```
+
+I wanted to convert this to a list where the two dates were formatted as characters in the format *01 January 2015* and the confidence_interval left as is. So, if the item was a date I wanted to apply the `format` function to it and if not a date do nothing to the item.
+
+Iterating over a list and applying a function? I knew I would want to use the `purrr` package.
+
+I just needed to find a function to only do something if the item passed some test.
+
+Enter `purrr::map_if()`
+`map_if` takes the list or vector you want to iterate over (a list in my case), a predicate function(?) and the function you want to apply to elements of the list.
+
+Back to the predicate function. Predicate is a word that hurts my head. I like to think of it as a guard function. Each element in the list gets passed to the guard function and it should return `TRUE` or `FALSE`, if an element passes the guard (`TRUE`) it gets passed to your main function. If an element doesn't pass the guard
+
+
+```{r test for date and format}
+library(purrr)
+library(lubridate)
+params %>%
+  map_if(is.Date, format, format = "%d %B %Y")
+
+```
+```{r test for date and format}
+library(purrr)
+library(lubridate)
+params %>%
+  map_at(c("start_at", "end_at"), format, format = "%d %B %Y")
+
+params %>%
+  map_at(c(1,3), format, format = "%d %B %Y")
+
+```
+
+
+
+
 
