@@ -19,6 +19,7 @@ header:
 
 A quick tip to add better twitter card support if you are using the Hugo-[Academic theme](https://sourcethemes.com/academic/) thanks to [George Cushen](https://twitter.com/georgecushen).
 Thanks to [this post from Village Blacksmith Consulting](http://villageblacksmith.consulting/hugo-twitter-cards/) for finally helping the puzzle.
+[and this post](https://xvrdm.github.io/2017/10/23/socialize-your-blogdown/?utm_content=buffere1410&utm_medium=social&utm_source=twitter.com&utm_campaign=buffer)
 
 What's a twitter card?  When you share a link to your new blog post, if the post has the required meta data the link will appear as richer display will appear
 
