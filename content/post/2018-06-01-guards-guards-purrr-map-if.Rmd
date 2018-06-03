@@ -16,6 +16,7 @@ header:
   caption: Guards! Guards!
   image: guards_guards.jpg
 slug: guards-guards-purrr-map-if
+image: guards_guards.jpg
 ---
 
 I found a cool use for purrr's `map_if` function recently that both felt wizardly and helped me better understand when to use `map_if`.
