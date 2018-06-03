@@ -49,7 +49,7 @@ Back to the predicate function. Predicate is a word that hurts my head. I like t
 
 Each item in the list gets passed to the guard function which should return either `TRUE` or `FALSE` for each item. If an item passes the guard (`TRUE`) it gets passed to your main function. If an item doesn't pass the guard then nothing happens to it, it goes to the output as is.
 
-In the example below I use `map_if` to test each item in the `params` list. My guard (predicate) function is `lubridate::is.Date`.  If the guard returns `TRUE` for an item, that item gets passed to the `format` function with the additional `format = "%d %B %Y"` argument. Sweet! `r blogdown::shortcode("emoji", "tada")`
+In the example below I use `map_if` to test each item in the `params` list. My guard (predicate) function is `lubridate::is.Date`.  If the guard returns `TRUE` for an item, that item gets passed to the `format` function with the additional `format = "%d %B %Y"` argument. Sweet! `r emo::ji("tada")`
 
 ```{r test for date and format, message=FALSE, warning=FALSE}
 library(purrr)
