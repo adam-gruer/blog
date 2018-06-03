@@ -12,7 +12,6 @@ tags:
   - purrr
   - rmarkdown
   - tidyverse
-draft: false
 header:
   caption: Guards! Guards!
   image: guards_guards.jpg
