@@ -82,11 +82,12 @@
   {{ if .IsPage }}
 <meta name="twitter:description" content="{{ .Summary }}" />
 <meta name="twitter:title" content="{{ .Title }}" />
-<meta name="twitter:image" content="{{ .Params.image }}" /> 
+<meta name="twitter:image" content="https://adamgruer.rbind.io/img/{{ .Params.header.image }}" /> 
 {{ else }}
 <meta name="twitter:title" content="{{ .Site.Title }}" />
 <meta name="twitter:description" content="{{ .Description }}" />
 {{ end }}
+
   <meta property="og:site_name" content="{{ .Site.Title }}">
   <meta property="og:url" content="{{ .Permalink }}">
   <meta property="og:title" content="{{ if not .IsHome }}{{ .Title }} | {{ end }}{{ .Site.Title }}">
