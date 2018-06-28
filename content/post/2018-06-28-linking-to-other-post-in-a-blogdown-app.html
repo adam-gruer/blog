@@ -1,0 +1,75 @@
+---
+title: "Linking to other post in a blogdown app"
+author: "Adam Gruer"
+date: '2018-06-28'
+draft: true
+header:
+  caption: ''
+  image: ''
+slug: linking-to-other-post-in-a-blogdown-app
+tags:
+- hugo
+- blogdown
+categories: Tips
+---
+
+
+
+<p>This a short post demonstrating how to link to another post from the .Rmd source of a separate post.</p>
+The directory of blog project looks a bit like this on my computer.
+<figure>
+<pre>
+your_blog
+|   .gitignore
+|   .Rhistory
+|   blog.Rproj
+|   config.toml
+|   index.Rmd
+|   README.md
+|   
++---archetypes
++---content
+|   +---home
+|   |       about.md
+|   |       hero.md
+|   |       posts.md
+|   |       tags.md
+|   |       
+|   +---post
+|   |       2017-11-12-github-issues-data-ozunconf-17.html
+|   |       2017-11-12-github-issues-data-ozunconf-17.Rmd
+|   |       2018-02-17-in-the-beginning.html
+|   |       2018-02-17-in-the-beginning.rmd
+|   |       2018-02-26-explore-a-packages-datasets.html
+|   |       2018-02-26-explore-a-packages-datasets.Rmd
+|   |       2018-06-01-guards-guards-purrr-map-if.html
+|   |       2018-06-01-guards-guards-purrr-map-if.Rmd
+|   |       2018-06-03-customize-hugo-academic-theme-for-twitter-card-support.md
+|   |       2018-06-28-linking-to-other-post-in-a-blogdown-app.html
+|   |       2018-06-28-linking-to-other-post-in-a-blogdown-app.Rmd
+|   |       _index.md
+...snip...
+</pre>
+</figure>
+Each .Rmd source file in your content/post folder has some YAML markup that will look something like this
+<figure>
+<pre>
+<code class="language-YAML">
+---
+title: "Linking to other post in a blogdown app"
+author: "Adam Gruer"
+date: '2018-06-28'
+draft: true
+header:
+  caption: ''
+  image: ''
+slug: linking-to-other-post-in-a-blogdown-app
+tags:
+- hugo
+- blogdown
+categories: Tips
+---
+</code>
+</pre>
+</figure>
+<p>The slug is the important thing for links. The slug in the YAML of my file <code>2018-06-01-guards-guards-purrr-map-if.Rmd</code> is <code>guards-guards-purrr-map-if</code> . If I ant to link to it from this post I can use a relative link of <code>/post/slug</code>, so in this instance <code class="language-html">&lt;a href=“/post/guards-guards-purrr-map-if”&gt;&lt;/a&gt; </code> <a href="/post/guards-guards-purrr-map-if">Guards! Guards!</a></p>
