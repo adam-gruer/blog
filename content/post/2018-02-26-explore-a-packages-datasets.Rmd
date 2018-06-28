@@ -1,0 +1,65 @@
+---
+title: Explore a package's datasets
+author: Adam Gruer
+date: '2018-02-26'
+slug: explore-a-packages-datasets
+draft: true
+categories: []
+tags: []
+---
+
+Thanks to Bo Peng for asking the question and Prof. Brian Ripley for answering it
+https://stat.ethz.ch/pipermail/r-help/2003-April/031666.html
+Bo is possibly https://twitter.com/bo_p
+
+* use `library(package_name)` to attach the package to the search list
+
+```{r attach-package}
+library(MASS)
+library(magrittr)
+```
+* use `search()` to view a list of attached packages
+```{r list-attached-packages}
+search()
+```
+
+
+* use `ls(name_of_element_in_search_list)` to return a character vector of all objects in the package environment 
+* todo map over all packages and require package then mget
+
+```{r}
+
+
+package_objects <- ls("package:MASS")
+length(package_objects)
+set.seed(42)
+sample(package_objects, 10)
+
+
+
+set.seed(42)
+sample_list <- sample(package_objects, 5) %>%  
+  mget( as.environment("package:MASS"))
+sample_list
+purrr::map_chr(sample_list, class) 
+
+head(sample_list$topo)
+
+ data(package = c("MASS","lattice"))$results[,c("Package","Item","Title")] %>% as.data.frame(stringsAsFactors = FALSE) %>% View()
+ 
+ 
+  data(package = .packages(TRUE) )$results[,c("Package","Item","Title")] %>% as.data.frame(stringsAsFactors = FALSE) %>% View()
+ 
+  
+ mapply(`+`, 1:6, 11:16, SIMPLIFY = FALSE)
+
+
+
+
+
+
+
+
+```
+
+
