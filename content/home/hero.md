@@ -20,7 +20,7 @@ weight = 3
 #   Activate the button by specifying a URL and button label below.
 #   Deactivate by commenting out parameters, prefixing lines with `#`.
 [cta]
-  url = "./post/linking-to-other-post-in-a-blogdown-app/"
+  url = "./post/guards-guards-purrr-map-if/"
   label = '<i class="fa fa-chevron-circle-right"></i> Latest post'
 +++
 
