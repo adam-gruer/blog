@@ -82,7 +82,7 @@ to that.  Guaranteed, works on my computer.
 
 IN a code chunk I think you can use
 ```{r}
-blogdown::shortcode("relref", "post/guards-guards-purrr-map-if")
+blogdown::shortcode_html("relref", "post/guards-guards-purrr-map-if")
 
 ```
 

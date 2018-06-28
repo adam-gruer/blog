@@ -181,8 +181,8 @@ categories: Tips
 </figure>
 <p>The slug is the important thing for links. The slug in the YAML of my file <code>2018-06-01-guards-guards-purrr-map-if.Rmd</code> is <code>guards-guards-purrr-map-if</code> . If I ant to link to it from this post I can use a relative link of <code>/post/slug</code>, so in this instance <code class="language-html">&lt;a href=“/post/guards-guards-purrr-map-if”&gt;&lt;/a&gt; </code> <a href="/post/guards-guards-purrr-map-if">Guards! Guards!</a> In oyur blog project on your computer, you treat the content folder as the root of your blog when it is published so all folder/slug paths should be relative to that. Guaranteed, works on my computer.</p>
 <p>IN a code chunk I think you can use</p>
-<pre class="r"><code>blogdown::shortcode(&quot;relref&quot;, &quot;post/guards-guards-purrr-map-if&quot;)</code></pre>
-{{% relref "post/guards-guards-purrr-map-if" %}}
+<pre class="r"><code>blogdown::shortcode_html(&quot;relref&quot;, &quot;post/guards-guards-purrr-map-if&quot;)</code></pre>
+{{< relref "post/guards-guards-purrr-map-if" >}}
 
 
 
