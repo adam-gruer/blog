@@ -5,7 +5,7 @@ date: '2018-06-28'
 draft: false
 header:
   caption: ''
-  image: links.jpg
+  image: 'links.jpg'
 slug: linking-to-other-post-in-a-blogdown-app
 tags:
   - hugo
