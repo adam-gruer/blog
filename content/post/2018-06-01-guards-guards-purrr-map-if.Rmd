@@ -1,0 +1,79 @@
+---
+title: 'Guards! Guards! purrr::map_if '
+author: Adam Gruer
+date: '2018-06-01'
+categories:
+  - Tips
+tags:
+  - map
+  - map_at
+  - map_if
+  - predicate
+  - purrr
+  - rmarkdown
+  - tidyverse
+header:
+  caption: Guards! Guards!
+  image: guards_guards.jpg
+slug: guards-guards-purrr-map-if
+image: "https://adamgruer.rbind.io/img/guards_guards.jpg"
+---
+
+I found a cool use for purrr's `map_if` function recently that both felt wizardly and helped me better understand when to use `map_if`.
+Problem: I had a list called `params`  with 3 items of different types
+
+- start_date - a Date 
+- end_date - a Date
+- confidence_interval - a Numeric
+
+```{r create the list}
+params <-  list(
+                start_date = as.Date("2015-01-01"),
+                end_date = as.Date("2015-12-31"),
+                confidence_interval = 0.8
+                )
+params
+```
+
+I wanted to convert this to a list where the two dates were converted to characters in the format *01 January 2015* and the confidence_interval left as is. So, if the item was a date I wanted to apply the `format(x, format = "%d %B %Y")` function to it and if not a date do nothing to the item.
+
+Iterating over a list and applying a function? I knew I would want to use the `purrr` package.
+
+I just needed to find a function to only do something if the item passed some test.
+
+Enter `purrr::map_if()`.
+
+`map_if` takes the list or vector you want to iterate over (a list in my case), a predicate function(?) and the function you want to map to items of the list.
+
+Back to the predicate function. Predicate is a word that hurts my head. I like to think of it as a guard function.
+
+Each item in the list gets passed to the guard function which should return either `TRUE` or `FALSE` for each item. If an item passes the guard (`TRUE`) it gets passed to your main function. If an item doesn't pass the guard then nothing happens to it, it goes to the output as is.
+
+In the example below I use `map_if` to test each item in the `params` list. My guard (predicate) function is `lubridate::is.Date`.  If the guard returns `TRUE` for an item, that item gets passed to the `format` function with the additional `format = "%d %B %Y"` argument. Sweet! `r emo::ji("tada")`
+
+```{r test for date and format, message=FALSE, warning=FALSE}
+library(purrr)
+library(lubridate)
+params %>%
+  map_if(is.Date, format , format = "%d %B %Y")
+```
+
+I then changed my mind and also wanted to format the numeric confidence_interval in the format _80%_.  I decided to pipe (`%>%`) to another `map_if`  and use `is.numeric` as my guard ans `scales::percent` as my map function.  Here is how it looks
+
+```{r multiple map_if}
+params %>%
+  map_if(is.Date, format , format = "%d %B %Y") %>%
+  map_if(is.numeric, scales::percent)
+```
+
+
+While reading the `map_if` help I also noted that there is a `map_at` function which doesn't take a guard function to decide which items to map but instead takes a guard vector of names of items or item positions. Useful if you know ahead of time the names or positions of items you want to act on. Here is how it would work in my example. 
+```{r map_at names}
+params %>%
+  map_at(c("start_date","end_date"), format , format = "%d %B %Y")
+```
+
+```{r map_at pos}
+params %>%
+  map_at(c(1,2), format , format = "%d %B %Y")
+```

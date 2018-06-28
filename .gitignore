@@ -7,3 +7,4 @@ public
 \.DS_Store
 
 static/img/Thumbs\.db
+#content/post/*.html

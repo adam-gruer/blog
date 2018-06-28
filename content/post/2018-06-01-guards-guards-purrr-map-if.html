@@ -1,0 +1,97 @@
+---
+title: 'Guards! Guards! purrr::map_if '
+author: Adam Gruer
+date: '2018-06-01'
+categories:
+  - Tips
+tags:
+  - map
+  - map_at
+  - map_if
+  - predicate
+  - purrr
+  - rmarkdown
+  - tidyverse
+header:
+  caption: Guards! Guards!
+  image: guards_guards.jpg
+slug: guards-guards-purrr-map-if
+image: "https://adamgruer.rbind.io/img/guards_guards.jpg"
+---
+
+
+
+<p>I found a cool use for purrr’s <code>map_if</code> function recently that both felt wizardly and helped me better understand when to use <code>map_if</code>.
+Problem: I had a list called <code>params</code> with 3 items of different types</p>
+<ul>
+<li>start_date - a Date</li>
+<li>end_date - a Date</li>
+<li>confidence_interval - a Numeric</li>
+</ul>
+<pre class="r"><code>params &lt;-  list(
+                start_date = as.Date(&quot;2015-01-01&quot;),
+                end_date = as.Date(&quot;2015-12-31&quot;),
+                confidence_interval = 0.8
+                )
+params</code></pre>
+<pre><code>## $start_date
+## [1] &quot;2015-01-01&quot;
+## 
+## $end_date
+## [1] &quot;2015-12-31&quot;
+## 
+## $confidence_interval
+## [1] 0.8</code></pre>
+<p>I wanted to convert this to a list where the two dates were converted to characters in the format <em>01 January 2015</em> and the confidence_interval left as is. So, if the item was a date I wanted to apply the <code>format(x, format = &quot;%d %B %Y&quot;)</code> function to it and if not a date do nothing to the item.</p>
+<p>Iterating over a list and applying a function? I knew I would want to use the <code>purrr</code> package.</p>
+<p>I just needed to find a function to only do something if the item passed some test.</p>
+<p>Enter <code>purrr::map_if()</code>.</p>
+<p><code>map_if</code> takes the list or vector you want to iterate over (a list in my case), a predicate function(?) and the function you want to map to items of the list.</p>
+<p>Back to the predicate function. Predicate is a word that hurts my head. I like to think of it as a guard function.</p>
+<p>Each item in the list gets passed to the guard function which should return either <code>TRUE</code> or <code>FALSE</code> for each item. If an item passes the guard (<code>TRUE</code>) it gets passed to your main function. If an item doesn’t pass the guard then nothing happens to it, it goes to the output as is.</p>
+<p>In the example below I use <code>map_if</code> to test each item in the <code>params</code> list. My guard (predicate) function is <code>lubridate::is.Date</code>. If the guard returns <code>TRUE</code> for an item, that item gets passed to the <code>format</code> function with the additional <code>format = &quot;%d %B %Y&quot;</code> argument. Sweet! 🎉</p>
+<pre class="r"><code>library(purrr)
+library(lubridate)
+params %&gt;%
+  map_if(is.Date, format , format = &quot;%d %B %Y&quot;)</code></pre>
+<pre><code>## $start_date
+## [1] &quot;01 January 2015&quot;
+## 
+## $end_date
+## [1] &quot;31 December 2015&quot;
+## 
+## $confidence_interval
+## [1] 0.8</code></pre>
+<p>I then changed my mind and also wanted to format the numeric confidence_interval in the format <em>80%</em>. I decided to pipe (<code>%&gt;%</code>) to another <code>map_if</code> and use <code>is.numeric</code> as my guard ans <code>scales::percent</code> as my map function. Here is how it looks</p>
+<pre class="r"><code>params %&gt;%
+  map_if(is.Date, format , format = &quot;%d %B %Y&quot;) %&gt;%
+  map_if(is.numeric, scales::percent)</code></pre>
+<pre><code>## $start_date
+## [1] &quot;01 January 2015&quot;
+## 
+## $end_date
+## [1] &quot;31 December 2015&quot;
+## 
+## $confidence_interval
+## [1] &quot;80%&quot;</code></pre>
+<p>While reading the <code>map_if</code> help I also noted that there is a <code>map_at</code> function which doesn’t take a guard function to decide which items to map but instead takes a guard vector of names of items or item positions. Useful if you know ahead of time the names or positions of items you want to act on. Here is how it would work in my example.</p>
+<pre class="r"><code>params %&gt;%
+  map_at(c(&quot;start_date&quot;,&quot;end_date&quot;), format , format = &quot;%d %B %Y&quot;)</code></pre>
+<pre><code>## $start_date
+## [1] &quot;01 January 2015&quot;
+## 
+## $end_date
+## [1] &quot;31 December 2015&quot;
+## 
+## $confidence_interval
+## [1] 0.8</code></pre>
+<pre class="r"><code>params %&gt;%
+  map_at(c(1,2), format , format = &quot;%d %B %Y&quot;)</code></pre>
+<pre><code>## $start_date
+## [1] &quot;01 January 2015&quot;
+## 
+## $end_date
+## [1] &quot;31 December 2015&quot;
+## 
+## $confidence_interval
+## [1] 0.8</code></pre>
