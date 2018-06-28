@@ -1,11 +1,11 @@
 ---
-title: "Linking to other post in a blogdown app"
+title: "Links - linking to other posts in your blogdown app"
 author: "Adam Gruer"
 date: '2018-06-28'
 draft: false
 header:
   caption: ''
-  image: ''
+  image: 'links.jpg'
 slug: linking-to-other-post-in-a-blogdown-app
 tags:
 - hugo
@@ -79,4 +79,11 @@ I can use a relative link of <code>/post/slug</code>, so in this instance
 In oyur blog project on your computer, you treat the content folder as the root
 of your blog when it is published so all folder/slug paths should be relative
 to that.  Guaranteed, works on my computer.
+
+IN a code chunk I think you can use
+```{r}
+blogdown::shortcode("relref", "post/guards-guards-purrr-map-if")
+
+```
+
 
