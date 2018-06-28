@@ -2,10 +2,10 @@
 title: "Links - linking to other posts in your blogdown app"
 author: "Adam Gruer"
 date: '2018-06-28'
-draft: false
+draft: no
 header:
   caption: ''
-  image: 'links.jpg'
+  image: links.jpg
 slug: linking-to-other-post-in-a-blogdown-app
 tags:
 - hugo
