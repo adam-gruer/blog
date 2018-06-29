@@ -1,0 +1,18 @@
+---
+title: 'Links - linking to other posts in your blogdown app'
+author: 'Adam Gruer'
+date: '2018-06-28'
+header:
+  caption: ''
+  image: 'links.jpg'
+slug: linking-to-other-post
+tags:
+  - hugo
+  - blogdown
+categories:
+  - Tips
+---
+
+
+This a short post demonstrating how to link to another post from the .Rmd source
+of a separate post.
