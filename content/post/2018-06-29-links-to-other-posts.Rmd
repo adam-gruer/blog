@@ -1,14 +1,20 @@
 ---
-title: 'Linking to other posts'
+title: 'Guards! Guards! purrr::map_if '
 author: Adam Gruer
-date: '2018-06-29'
-slug: links-to-other-posts
+date: '2018-06-01'
 categories:
   - Tips
 tags:
-  - beginners
+  - map
+  - map_at
+  - map_if
+  - predicate
+  - purrr
+  - rmarkdown
+  - tidyverse
 header:
-  caption: links
-  image: link.jpg
-image: 'https://adamgruer.rbind.io/img/links.jpg'
+  caption: Guards! Guards!
+  image: guards_guards.jpg
+slug: links-to-other-posts
+image: "https://adamgruer.rbind.io/img/guards_guards.jpg"
 ---
