@@ -1,0 +1,88 @@
+---
+title: "Links - linking to other posts in your blogdown app"
+author: "Adam Gruer"
+date: '2018-06-28'
+draft: false
+header:
+  caption: ''
+  image: 'links.jpg'
+slug: linking-to-other-post-in-a-blogdown-app
+tags:
+  - hugo
+  - blogdown
+categories:
+  - Tips
+---
+
+
+This a short post demonstrating how to link to another post from the .Rmd source
+of a separate post.
+
+The directory of blog project looks a bit like this on my computer.
+<figure>
+<pre>
+blog
+|   .gitignore
+|   .Rhistory
+|   blog.Rproj
+|   config.toml
+|   index.Rmd
+|   README.md
+|   
++---archetypes
++---content
+|   +---home
+|   |       about.md
+|   |       hero.md
+|   |       posts.md
+|   |       tags.md
+|   |       
+|   +---post
+|   |       2018-06-01-guards-guards-purrr-map-if.html
+|   |       2018-06-01-guards-guards-purrr-map-if.Rmd
+|   |       2018-06-28-linking-to-other-post-in-a-blogdown-app.html
+|   |       2018-06-28-linking-to-other-post-in-a-blogdown-app.Rmd
+|   |       _index.md
+...snip...
+</pre>
+</figure>
+
+Each .Rmd source file in your content/post folder has some YAML markup that will
+look something like this
+<figure>
+<pre>
+<code class="language-YAML">
+---
+title: "Linking to other post in a blogdown app"
+author: "Adam Gruer"
+date: '2018-06-28'
+draft: true
+header:
+  caption: ''
+  image: ''
+slug: linking-to-other-post-in-a-blogdown-app
+tags:
+  - hugo
+  - blogdown
+categories: Tips
+---
+</code>
+</pre>
+</figure>
+
+The slug is the important thing for links.
+The slug in the YAML of my file
+<code>2018-06-01-guards-guards-purrr-map-if.Rmd</code> is
+<code>guards-guards-purrr-map-if</code> .  If I ant to link to it from this post
+I can use a relative link of <code>/post/slug</code>, so in this instance 
+<code class="language-html">&lt;a href="/post/guards-guards-purrr-map-if">&lt;/a>
+</code> <a href="/post/guards-guards-purrr-map-if">Guards! Guards!</a>
+In oyur blog project on your computer, you treat the content folder as the root
+of your blog when it is published so all folder/slug paths should be relative
+to that.  Guaranteed, works on my computer.
+
+I am not sure how to create links from R chunks my attempts to use <code>
+blogdown::shortcode("relref", "post/guards-guards-purrr-map-if")</code> or 
+<code>
+blogdown::shortcode_html("relref", "post/guards-guards-purrr-map-if")</code> 
+caused my netlify build to fail. 
