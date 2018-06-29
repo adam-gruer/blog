@@ -12,3 +12,6 @@ header:
   image: ''
 ---
 
+This a short post demonstrating how to link to another post from the .Rmd source
+of a separate post.
+
