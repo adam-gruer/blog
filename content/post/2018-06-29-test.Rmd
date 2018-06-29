@@ -1,0 +1,14 @@
+---
+title: test
+author: Adam Gruer
+date: '2018-06-29'
+slug: test
+categories:
+  - Beginner
+tags:
+  - R
+header:
+  caption: ''
+  image: ''
+---
+
