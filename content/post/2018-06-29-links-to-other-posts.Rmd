@@ -1,0 +1,12 @@
+---
+title: 'Linking to other posts'
+author: Adam Gruer
+date: '2018-06-29'
+slug: links-to-other-posts
+categories: []
+tags: []
+header:
+  caption: links
+  image: link.jpg
+image: 'https://adamgruer.rbind.io/img/links.jpg'
+---
