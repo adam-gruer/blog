@@ -20,7 +20,7 @@ weight = 3
 #   Activate the button by specifying a URL and button label below.
 #   Deactivate by commenting out parameters, prefixing lines with `#`.
 [cta]
-  url = "./post/guards-guards-purrr-map-if/"
+  url = "./post/user-2018/"
   label = '<i class="fa fa-chevron-circle-right"></i> Latest post'
 +++
 
