@@ -13,8 +13,10 @@ header:
   caption: ''
   image: ''
 ---
+**tldr: I haven't completed this post yet its WIP - I'll tweet when it's done.**
 
 it's taken a long time to write about my experience  at user!2018 in Brisbane.
 Partly , i was having some problems with my blog not building on Netlify that I
 couldnt resolve. also i fell into a bit of a post conference funk.
+ 
 
