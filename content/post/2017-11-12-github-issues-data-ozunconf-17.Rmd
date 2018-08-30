@@ -45,7 +45,7 @@ library(dplyr)  # data wrangling and pipes %>%
 library(purrr) # there will be a lot of map / reducing with the returned data
 # devtools::install_github("ropenscilabs/icon")
 library(icon) # for some cool icons!
-# devtools::install_github("ropenscilabs/ochRe"
+# devtools::install_github("ropenscilabs/ochRe")
 library(ochRe) # for some Oz color palettes
 ```
 

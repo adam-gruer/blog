@@ -5,13 +5,14 @@ date: '2018-08-26'
 header:
   caption: Team <-
   image: team_left_assignment.jpg
-image: https://adamgruer.rbind.io/img/team_left_assignment.jpg
+image: "https://adamgruer.rbind.io/img/team_left_assignment.jpg"
 slug: user-2018
-tags: R
+tags:
+  - R
 categories:
-- Community
-- Conferences
-- Beginner
+  - Community
+  - Conferences
+  - Beginner
 ---
 **tldr: I haven't completed this post yet its WIP - I'll tweet when it's done.**
 
