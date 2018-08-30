@@ -1,17 +1,17 @@
 ---
-title: user!2018
-author: Adam Gruer
+title: "user!2018"
+author: "Adam Gruer"
 date: '2018-08-26'
-slug: user-2018
-categories:
-  - Community
-  - Conferences
-  - Beginner
-tags:
-  - R
 header:
-  caption: ''
-  image: ''
+  caption: Team <-
+  image: team_left_assignment.jpg
+image: https://adamgruer.rbind.io/img/team_left_assignment.jpg
+slug: user-2018
+tags: R
+categories:
+- Community
+- Conferences
+- Beginner
 ---
 **tldr: I haven't completed this post yet its WIP - I'll tweet when it's done.**
 
