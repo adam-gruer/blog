@@ -3,6 +3,8 @@ title: forking around
 author: Adam Gruer
 date: '2018-12-15'
 slug: forking-around
+output:
+  blogdown::html_page
 categories:
   - Development
   - Experiment
