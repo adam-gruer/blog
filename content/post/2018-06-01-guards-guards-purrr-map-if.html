@@ -21,7 +21,8 @@ image: "https://adamgruer.rbind.io/img/guards_guards.jpg"
 
 
 
-<p>I found a cool use for purrr’s <code>map_if</code> function recently that both felt wizardly and helped me better understand when to use <code>map_if</code>. Problem: I had a list called <code>params</code> with 3 items of different types</p>
+<p>I found a cool use for purrr’s <code>map_if</code> function recently that both felt wizardly and helped me better understand when to use <code>map_if</code>.
+Problem: I had a list called <code>params</code> with 3 items of different types</p>
 <ul>
 <li>start_date - a Date</li>
 <li>end_date - a Date</li>
@@ -72,7 +73,7 @@ params %&gt;%
 ## [1] &quot;31 December 2015&quot;
 ## 
 ## $confidence_interval
-## [1] &quot;80%&quot;</code></pre>
+## [1] &quot;80.0%&quot;</code></pre>
 <p>While reading the <code>map_if</code> help I also noted that there is a <code>map_at</code> function which doesn’t take a guard function to decide which items to map but instead takes a guard vector of names of items or item positions. Useful if you know ahead of time the names or positions of items you want to act on. Here is how it would work in my example.</p>
 <pre class="r"><code>params %&gt;%
   map_at(c(&quot;start_date&quot;,&quot;end_date&quot;), format , format = &quot;%d %B %Y&quot;)</code></pre>

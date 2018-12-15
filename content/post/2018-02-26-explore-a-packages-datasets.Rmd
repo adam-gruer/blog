@@ -45,10 +45,10 @@ purrr::map_chr(sample_list, class)
 
 head(sample_list$topo)
 
- data(package = c("MASS","lattice"))$results[,c("Package","Item","Title")] %>% as.data.frame(stringsAsFactors = FALSE) %>% View()
+ data(package = c("MASS","lattice"))$results[,c("Package","Item","Title")] %>% as.data.frame(stringsAsFactors = FALSE) 
  
  
-  data(package = .packages(TRUE) )$results[,c("Package","Item","Title")] %>% as.data.frame(stringsAsFactors = FALSE) %>% View()
+  data(package = .packages(TRUE) )$results[,c("Package","Item","Title")] %>% as.data.frame(stringsAsFactors = FALSE)
  
   
  mapply(`+`, 1:6, 11:16, SIMPLIFY = FALSE)
