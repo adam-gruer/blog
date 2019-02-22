@@ -1,0 +1,17 @@
+---
+title: Goodshirt
+author: Adam Gruer
+date: '2019-02-22'
+categories: []
+tags:
+  - packages
+header:
+  caption: ''
+  image: ''
+---
+
+The Good Place is such a great show.  I recntly created an API client package called goodshirt to bring a tast of The Good Place to our Good place, the R console.
+
+![ascii image of a cat](goodshirt_cat.png)
+
+
