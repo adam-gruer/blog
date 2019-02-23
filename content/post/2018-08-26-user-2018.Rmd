@@ -6,7 +6,6 @@ header:
   caption: Team <-
   image: team_left_assignment.jpg
 image: "https://adamgruer.rbind.io/img/team_left_assignment.jpg"
-slug: user-2018
 tags:
   - R
 categories:
