@@ -3,6 +3,7 @@ title: Goodshirt
 author: Adam Gruer
 date: '2019-02-22'
 categories: []
+slug: goodshirt
 tags:
   - packages
 header:

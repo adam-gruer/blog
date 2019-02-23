@@ -21,6 +21,9 @@ googleAnalytics = "UA-124927328-1"
 defaultContentLanguage = "en"
 defaultContentLanguageInSubdir = false
 
+[permalinks]
+  post = "/:section/:slug/"
+
 [outputs]
   home = [ "HTML", "CSS", "RSS" ]
   section = [ "HTML", "RSS" ]
