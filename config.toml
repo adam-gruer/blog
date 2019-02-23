@@ -1,6 +1,8 @@
 # End your URL with a `/` trailing slash, e.g. `https://example.com/`.
 baseurl = "/" 
 
+[permalinks]
+  posts = "/:section/:slug/"
 
 title = "Adam Gruer"
 copyright = "&copy; 2018 Adam Gruer"
