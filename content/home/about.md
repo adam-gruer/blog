@@ -12,6 +12,7 @@ weight = 5
   interests = [
     "Data Science",
 	"Programming",
+	"Environmental Regulation",
     "Public Healthcare",
     "Equality and Diversity"
   ]
@@ -27,4 +28,4 @@ weight = 5
 
 # Biography
 
-I have been providing analytics and programming solutions in the Victorian Public Health system since 2003.  
+I am a data scientist helping to teach and include others.  

@@ -46,12 +46,11 @@ defaultContentLanguageInSubdir = false
 
   # Your details.
   name = "Adam Gruer"
-  role = "Business Analyst"
+  role = "Analyst"
 
   # Organizations/Affiliations.
   #   Separate multiple entries with a comma, using the form: `[ {name="Org1", url=""}, {name="Org2", url=""} ]`.
-  organizations = [ { name = "The Royal Children's Hospital Melbourne", url = "https://www.rch.org.au" } ]
-
+  organizations = [ { name = "EPA Victoria  ", url = "https://www.epa.vic.gov.au/"}]
   gravatar = false  # Get your avatar from Gravatar.com? (true/false)
   avatar = "portrait.jpg"  # Specify an avatar image (in `static/img/` folder) or delete value to disable avatar.
   email = "adamgruer@icloud.org"
