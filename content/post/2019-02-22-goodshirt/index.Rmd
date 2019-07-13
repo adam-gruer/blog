@@ -8,7 +8,8 @@ tags:
   - packages
 header:
   caption: ''
-  image: ''
+  image: goodshirt_cat.png
+image: "https://adamgruer.rbind.io/img/goodshirt_cat.png"
 ---
 
 The Good Place is such a great show.  I recently created an API client package called goodshirt to bring a tast of The Good Place to our Good place, the R console.
