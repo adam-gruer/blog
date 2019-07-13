@@ -10,16 +10,13 @@ tags:
   - shiny
   - pmap
 header:
-  caption: ''
-  image: 'pmap.jpg'
+  image: pmap.jpg
+image: "pmap.jpg"
 ---
 
 
 
-<div class="figure">
-<img src="pmap.jpg" alt="image of a weaving machine" />
-<p class="caption">image of a weaving machine</p>
-</div>
+<!-- ![image of a weaving machine](pmap.jpg) -->
 <p>Here is one way to generate dynamic html for your <a href="https://shiny.rstudio.com/">Shiny app</a> from a reactive data frame using my favorite <a href="https://purrr.tidyverse.org/">tidyverse package purrr</a> and specifically the <a href="https://purrr.tidyverse.org/reference/map2.html">pmap function</a>.</p>
 <p>I’ve created a shiny app that uses the starwars dataset included with dplyr. The user selects a species from a drop down. Then for each character who belongs to that species some sweet html is generated that displays their name in a <code>&lt;h1&gt;</code> tag, their home planet in a <code>&lt;h2&gt;</code> tag and their species in a <code>&lt;h3&gt;</code> tag. The whole thing is wrapped in a div with some sick css styling. Here is a screenshot.
 <img src="app.png" alt="image of a list of characters from starwars details in yellow with a black background" />. Once I publish this app I’m pretty sure I’ll be able to retire on the revenues it generates.</p>

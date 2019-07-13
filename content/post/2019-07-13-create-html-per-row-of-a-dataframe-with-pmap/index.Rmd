@@ -10,11 +10,11 @@ tags:
   - shiny
   - pmap
 header:
-  caption: ''
-  image: 'pmap.jpg'
+  image: pmap.jpg
+image: "pmap.jpg"
 ---
 
-![image of a weaving machine](pmap.jpg)
+<!-- ![image of a weaving machine](pmap.jpg) -->
 
 Here is one way to generate dynamic html for your [Shiny app](https://shiny.rstudio.com/) from a reactive data frame using my favorite [tidyverse package purrr](https://purrr.tidyverse.org/) and specifically the [pmap function](https://purrr.tidyverse.org/reference/map2.html).
 
