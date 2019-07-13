@@ -11,12 +11,12 @@ tags:
   - pmap
 header:
   caption: ''
-  image: 'pmap.png'
+  image: 'pmap.jpg'
 ---
 
 ![image of a weaving machine](pmap.jpg)
 
-Here is one way to generate dynamic html for your Shiny app from a reactive dataframe using my favorite tidyverse package purrr and specifically the pmap function.
+Here is one way to generate dynamic html for your [Shiny app](https://shiny.rstudio.com/) from a reactive data frame using my favorite [tidyverse package purrr](https://purrr.tidyverse.org/) and specifically the [pmap function](https://purrr.tidyverse.org/reference/map2.html).
 
 I've created a shiny app that uses the starwars dataset included with dplyr. The user selects a species from a drop down. Then for each character who belongs to that species some sweet html is generated that displays their name in a `<h1>` tag, their home planet in a `<h2>` tag and their species in a `<h3>` tag.  The whole thing is wrapped in a div with some sick css styling.  Here is a screenshot.
 ![image of a list of characters from starwars details in yellow with a black background](app.png).  Once I publish this app I'm pretty sure I'll be able to retire on the revenues it generates.
@@ -128,7 +128,7 @@ filter(starwars, species == "Wookiee") %>%
 
 I think we are done. purrr and pmap for the win yet again. Just need to put our ui function and our data wrangling pmapping code into our Shiny app.
 [Jenny Bryan has a great walkthrough of pmap examples](https://github.com/jennybc/row-oriented-workflows/blob/master/ex06_runif-via-pmap.md)
-Here is the app code
+Here is the app code, please don't use it to scoop me on the riches from this app.
 
 ```{r  app , eval=FALSE}
 #
