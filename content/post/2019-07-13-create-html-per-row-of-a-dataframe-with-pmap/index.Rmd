@@ -1,0 +1,15 @@
+---
+title: Generate html per row of a dataframe with pmap
+author: Adam Gruer
+date: '2019-07-13'
+slug: create-html-per-row-of-a-dataframe-with-pmap
+categories:
+  - Tips
+tags:
+  - purrr
+  - shiny
+  - pmap
+header:
+  caption: ''
+  image: ''
+---
