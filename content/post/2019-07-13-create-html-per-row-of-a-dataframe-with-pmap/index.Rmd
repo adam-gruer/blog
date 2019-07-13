@@ -65,7 +65,7 @@ typeof(my_div)
 length(my_div)
 ```
 
-In the code for the app I want to create. I am going top `filter` the dataset by species, then `mutate` a new column to hold the html for each character and then `pull` just that column.  All this will happen in a call to `shiny::renderUI`.
+In the code for the app I want to create. I am going to `filter` the dataset by species, then `mutate` a new column to hold the html for each character and then `pull` just that column.  All this will happen in a call to `shiny::renderUI`.
 This attempt fails
 
 ```{r fail, eval=FALSE}
@@ -77,11 +77,13 @@ filter(starwars, species == "Droid") %>%
 ```
 
 When you are mutating a dataframe the thing you are mutating to for each row needs to be of **length 1** (mostly, I won't get into the number of rows variant).
-Our function always returns a list of length three for each character. What to do?
+Our function always returns a list of length three for each row. What to do?
 
 `purrr::pmap()` FTW!!
 
-`pmap` takes a list of vectors (remember that a data frame, tibble is a list of vectors) and a function.  The length of the list, i.e the number of vectors it contains, determines the number of arguments that the function will be called with.  That is to say each vector in the list will be an argument to the function, and it will be called once per item in the vectors , aka once per row.  Each time it runs we get a list back but a list of length 1 (with our other list of length 3 inside that, TURTLES!!)
+`pmap` takes a list of vectors (remember that a data frame, tibble is a list of vectors) and a function.  The length of the list, i.e the number of vectors it contains, determines the number of arguments that the function will be called with.  That is to say each vector in the list will be an argument to the function, and it will be called once per item in the vectors , aka once per row. 
+Each time it runs we get a list back but a list of length 1 (with our other list of length 3 inside that, TURTLES!!).
+
 We can't just do something like
 
 ```{r demo works, eval=FALSE}
@@ -90,6 +92,9 @@ pmap(starwars, star_wars_ui)
 
 because our function only accepts 3 arguments and the starwars tibble is a list of 13 vectors.
 We have a couple of options for this first argument to `pmap`.
+
+### Select
+
 We could add a `select` before the call to `pmap` and refer to the tibble as `.`
 in `pmap`
 
@@ -100,6 +105,8 @@ filter(starwars, species == "Wookiee") %>%
            pull(display)
 ```
 
+### Create a List
+
 or we can create a list from the three vectors inside the `pmap` function
 
 ```{r list}
@@ -108,7 +115,7 @@ filter(starwars, species == "Wookiee") %>%
            pull(display)
 ```
 
-Note we could call tibble or data.frame (stringsAsFactors = FALSE !!) instead of list
+**Note** we could call tibble or data.frame (stringsAsFactors = FALSE !!) instead of list
 
 ```{r tibble}
 filter(starwars, species == "Wookiee") %>% 
