@@ -3,7 +3,7 @@ baseurl = "/"
 
 
 title = "Adam Gruer"
-copyright = "&copy; 2018 Adam Gruer"
+copyright = "&copy; 2019 Adam Gruer"
 theme = "hugo-academic"
 enableEmoji = true
 footnotereturnlinkcontents = "<sup>^</sup>"
