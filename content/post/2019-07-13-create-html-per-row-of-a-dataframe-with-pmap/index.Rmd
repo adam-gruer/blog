@@ -13,3 +13,5 @@ header:
   caption: ''
   image: ''
 ---
+
+Here is one way to generate dynamic html for your Shiny app from a reactive dataframe using my favorite tidyverse package purrr and specifically the pmap function.
